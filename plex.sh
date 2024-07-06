@@ -7,6 +7,7 @@ sudo docker run -d \
     -e PLEX_GID="100" \
     -e PLEX_UID="1026" \
     -v /volume1/docker/plex:/config \
-    -v /volume1/Backup/TV/Media:/data/media:ro \
-    -v /volume1/Others/Videos:/data/others_videos:ro \
+    -v /volume1/docker/plex/Others:/data/others \
+    -v /volume1/data/tv/Media:/data/media:ro \
+    -v /volume1/docker/nginx/config:/cert:ro \
     plexinc/pms-docker
